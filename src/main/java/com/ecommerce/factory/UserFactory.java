@@ -1,6 +1,8 @@
 package com.ecommerce.factory;
 
 import com.ecommerce.domain.User;
+import com.ecommerce.util.Helper;
+
 import java.util.UUID;
 
 public class UserFactory {
@@ -10,6 +12,13 @@ public class UserFactory {
                                   String userEmail,
                                   String cellNo,
                                   String userPassword) {
+        if(Helper.isNullOrEmpty(firstName)||
+           Helper.isNullOrEmpty(lastName)){
+throw new IllegalArgumentException("Name or surname required");
+
+        }
+        if(!Helper.isValidEmail(userEmail))
+         throw new IllegalArgumentException("Invalid Email");
 
         String userId = UUID.randomUUID().toString();
 

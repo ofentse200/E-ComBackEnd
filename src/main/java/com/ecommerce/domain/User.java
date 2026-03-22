@@ -2,12 +2,12 @@ package com.ecommerce.domain;
 
 public class User {
 
-    private String userId;
-    private String firstName;
-    private String lastName;
-    private String userEmail;
-    private String cellNo;
-    private String userPassword;
+    private final String userId;
+    private final String firstName;
+    private final String lastName;
+    private final String userEmail;
+    private final String cellNo;
+    private final String userPassword;
 
 
     public User( UserBuilder builder){
@@ -64,19 +64,20 @@ public class User {
             return this;
         }
 
-        @Override
-        public String toString() {
-            return "UserBuilder{" +
-                    "userId='" + userId + '\'' +
-                    ", firstName='" + firstName + '\'' +
-                    ", lastName='" + lastName + '\'' +
-                    ", userEmail=" + userEmail +
-                    ", cellNo=" + cellNo +
-                    ", userPassword=" + userPassword +
-                    '}';
-        }
+
         public User build() {
             return new User(this);
         }
+    }
+    @Override
+    public String toString() {
+        return "UserBuilder{" +
+                "userId='" + userId + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", userEmail=" + userEmail +
+                ", cellNo=" + cellNo +
+                ", userPassword=" + userPassword +
+                '}';
     }
 }

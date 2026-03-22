@@ -67,21 +67,21 @@ public class Address {
             return this;
         }
 
-        @Override
-        public String toString() {
-            return "AddressBuilder{" +
-                    "addressId='" + addressId + '\'' +
-                    ", streetNumber='" + streetNumber + '\'' +
-                    ", streetName='" + streetName + '\'' +
-                    ", city='" + city + '\'' +
-                    ", province='" + province + '\'' +
-                    ", postalCode='" + postalCode + '\'' +
-                    ", country='" + country + '\'' +
-                    '}';
-        }
         public Address build() {
             return new Address(this);
         }
+    }
+    @Override
+    public String toString() {
+        return "AddressBuilder{" +
+                "addressId='" + addressId + '\'' +
+                ", streetNumber='" + streetNumber + '\'' +
+                ", streetName='" + streetName + '\'' +
+                ", city='" + city + '\'' +
+                ", province='" + province + '\'' +
+                ", postalCode='" + postalCode + '\'' +
+                ", country='" + country + '\'' +
+                '}';
     }
 }
 

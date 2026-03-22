@@ -13,7 +13,7 @@ public class Main {
                 "Ward 27",
                 "Cape Town",
                 "Western Cape",
-                "445 Schoemansdaal",
+                "445",
                 "South Africa");
 
         System.out.println(address);
